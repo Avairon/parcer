@@ -1,10 +1,10 @@
-import argparse
+import argparse  # ДИСКЛЕЙМЕР можешь на картошку посадить все коменты убрать, мне арбуз ваще
 import sys
 from dataclasses import dataclass
 from typing import Union
 
 @dataclass
-class Stats:
+class Stats: #класс с насследованием, в нем статистика
     count_values: int = 0
     max: Union[int, float] = 0
     min: Union[int, float] = 0
@@ -91,13 +91,13 @@ def sort_data_by_type(input_file, output_path, file_prefix, append_mode, stats_t
 #    float_count = 0
 #    string_count = 0
 
-    int_stats = Stats()
+    int_stats = Stats() # 3 класса со статистикой
     float_stats = Stats()
     string_stats = Stats()
 
     if_has = [0, 0, 0]
 
-    with open(input_file, 'r') as file:
+    with open(input_file, 'r') as file: # сам парсинг с записью если есть что
         for line in file:
             line = line.strip()
             try:
@@ -120,6 +120,9 @@ def sort_data_by_type(input_file, output_path, file_prefix, append_mode, stats_t
         if_has[1] = 1
     if string_stats.count_values:
         if_has[2] = 1
+
+    # А тут можешь просто выдавать статистику через все переменные внутри обьекта
+
 
    #pars_to_files(input_file, output_path, file_prefix, append_mode, if_has)
 
