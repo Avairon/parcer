@@ -1,4 +1,4 @@
-import argparse  # ДИСКЛЕЙМЕР можешь на картошку посадить все коменты убрать, мне арбуз ваще
+import argparse  # ДИСКЛЕЙМЕР можешь на картошку посадить все коменты, мне арбуз ваще
 import sys
 from dataclasses import dataclass
 from typing import Union
